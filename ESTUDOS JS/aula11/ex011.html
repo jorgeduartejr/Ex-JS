@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfândega</title>
+</head>
+
+<body>
+    <h1>Sistema Alfandegario</h1>
+    Digite aqui o seu pais de origem: <input type="text" name="txttext" id="txttext">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res"></div>
+</body>
+<script>
+    function verificar() {
+        var txttext = window.document.querySelector('input#txttext')
+        var res = window.document.querySelector('div#res')
+        var pais = (txttext.value)
+        res.innerHTML = `<p> Você é do Pais ${pais}.</p>`
+        if (pais == 'Brasil') {
+            res.innerHTML += '<p> Você é BRASILEIRO! </p>'
+
+        } else {
+            res.innerHTML += 'Você é ESTRANGEIRO'
+        }
+
+
+
+
+    }
+</script>
+
+</html>
